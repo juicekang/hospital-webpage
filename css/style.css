@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+	@font-face { font-family: 'HangultuelGothic'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_ten@1.10/HangultuelGothic.woff') format('woff'); font-weight: normal; font-style: normal; }
+	* { margin:0; padding:0; box-sizing: border-box; }
+	li { list-style: none;}
+	a { text-decoration: none;}
+	html, body { 
+		font-family: 'Noto Sans KR', sans-serif; 
+		height:100%;
+	}
+	.align { width:1180px; margin:0 auto;}
+
+	header {
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:80px;
+		z-index: 6;
+		transition:all 0.8s;
+	}
+
+	header:hover {
+		height:270px;
+		background:#fff;
+	}
+	
+	header #logo { 
+			width:200px; 
+			height:80px;
+			float:left; 
+	}
+	header #navi {
+		float:right; 
+		width:880px; 
+	}
+	header #navi > #lnb > ul { 
+		width:700px; 
+		height:80px; 
+		float:left; 
+	}
+	header #navi > #lnb > ul > li { 
+		float:left;
+		text-align:center;
+		position:relative;
+		width:140px;
+	}
+	header #navi > #lnb > ul > li > a {
+		color:#fff;
+		line-height:80px;
+		box-sizing:border-box;
+		font-weight:bold;
+	}
+	header #navi > #lnb > ul ul {
+		position:absolute;
+		left:0;
+		top:100%;
+		width:100%;
+	}
+	header #navi > #lnb > ul ul li {
+		margin-bottom:20px;
+	}
+	header #navi > #lnb > ul ul li a {
+		color:#fff;
+		font-size:14px;
+		font-weight:bold;
+	}
+
+	header #navi > #lnb > ul > li:hover > a{
+		border-bottom:3px solid #84d1ac;
+	}
+	header #navi > #lnb > ul ul li:hover a { border-bottom:2px solid #000; }
+	header #navi > #gnb > ul { 
+		height:80px; 
+		float:right; 
+	}
+	header #navi > #gnb > ul > li { float:left; margin-right:10px;}
+	header #navi > #gnb > ul > li:last-child { margin-right:0; }
+	header #navi > #gnb > ul > li a { 
+		font-size:14px;
+		color:#fff;
+		display:block;
+		line-height:80px;
+		font-weight:bold;
+		transition:all 0.3s;
+	}
+	header #navi > #gnb > ul > li:hover a {
+		color:#84d1ac;
+	}
+	#bgimg { 
+		width:100%;
+		height:calc(100% - 80px);
+		overflow:hidden;
+		position:relative;
+	}
+	#bgimg .slider { height:100%; overflow:hidden;}
+	#bgimg .slider ul {
+		position:relative;
+		width:100%;
+		height:100%;
+	}
+	#bgimg .slider ul li { 
+		position:absolute; 
+		text-indent:-9999px;
+		height:100%;
+		width:100%;
+	}
+
+	
+	.slider .visual1 { 
+		background:url("../img/slider1.jpg") left center no-repeat;
+		background-size:cover;
+	}
+
+	.slider .visual2 { 
+		background:url("../img/slider2.jpg") left center no-repeat;
+		background-size:cover;
+	}
+	
+	#bgimg .slidebar {
+		position:absolute;
+		left:0;
+		top:-10%;
+		overflow:hidden;
+	}
+
+	.slidebar li {
+		float:left;
+		text-indent:-9999px;
+		width:50px;
+		height:5px;
+		background:#fff;
+		margin-right:10px;
+		cursor:pointer;
+		transition:all 2s;
+	}
+
+	.slidebar li.on {
+		width:100px;
+		background:#12b8ba;
+	}
+
+	#bgimg #textbox .align {
+		position:relative;
+		height:300px;
+	}
+	#bgimg #textbox {
+		position:absolute;
+		left:20%;
+		bottom:20%;
+		z-index:2;
+	}
+	#bgimg #textbox p {
+		font-size:37px;
+		color:#fff;
+		line-height: 50px;
+	}
+
+	#bgimg #textbox button {
+		width:280px;
+		height:70px;
+		background:transparent;
+		border:2px solid #fff;
+		color:#fff;
+		font-size:18px;
+		margin-top:20px;
+		cursor: pointer;
+		font-weight:bold;
+		transition:all 0.3s;
+	}
+	#bgimg #textbox button:hover {
+		background:rgba(255,255,255,0.5);
+		color:rgba(0,0,0,0.8);
+	}
+	#sublnb { 
+		height:80px;
+		background-color: #12b8ba;
+		box-sizing: border-box;
+	}
+	#sublnb ul { text-align:center; }
+	#sublnb ul li { 
+		display: inline-block;
+		line-height:80px;
+	}
+	#sublnb ul li:hover a { background:rgba(255,255,255,0.3); }
+	#sublnb ul li a { 
+		color:#fff; 
+		font-size:20px;
+		display: block;
+		padding:0 60px 0 100px;
+		transition:all 0.3s;
+	}
+	#sublnb ul li:nth-of-type(1) {
+		background:url("../img/subnav1.svg") no-repeat;
+		background-size:40px 40px;
+		background-position:50px center;
+	}
+	#sublnb ul li:nth-of-type(2) {
+		background:url("../img/subnav2.svg") no-repeat;
+		background-size:40px 40px;
+		background-position:50px center;
+	}
+	#sublnb ul li:nth-of-type(3) {
+		background:url("../img/subnav3.svg") no-repeat;
+		background-size:40px 40px;
+		background-position:50px center;
+	}
+	#sublnb ul li:nth-of-type(4) {
+		background:url("../img/subnav4.svg") no-repeat;
+		background-size:40px 40px;
+		background-position:50px center;
+	}
+	#sublnb ul li div {
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:calc(100% - 80px);
+		z-index:2;
+		transition:all 0.5s;
+		overflow:hidden;
+	}
+	#sublnb ul li div img { height:100%; }
+
+	#con1 {
+		height:413px;
+		position:relative;
+		padding-top: 60px;
+		padding-bottom:60px;
+		box-sizing: border-box;
+		text-align: center;
+	}
+
+	#con1 h1 { 
+		text-align:center;
+		font-size:34px;
+		font-weight: normal;
+		box-sizing:border-box;
+		line-height: 34px;
+	}
+	#con1 .align hr {
+		width:295px;
+		height:4px;
+		background-color: #84d1ac;
+		border: none;
+		display: inline-block;
+	}
+	#con ul { overflow: hidden; width:100%; margin-top:60px;}
+	#con1 ul li { 
+		width:180px;
+		height:201px;
+		float:left;
+		margin-right:20px;
+		text-align: center;
+		padding-top:30px;
+		box-sizing: border-box;	
+	}
+	#con1 ul li img { width:120px; display:block; margin: 0 20px 30px 30px; }
+	#con1 ul li:last-child { margin-right: 0;}
+	#con1 ul li p { 
+		color:black; 
+		border-bottom:3px solid transparent; 
+		transition:all 0.3s;
+		position:relative;
+	}
+	#con1 ul li p:after {
+		content:"";
+		width:100px;
+		height:3px;
+		position:absolute;
+		left:40px;
+		top:30px;
+		z-index:3;
+		background:#12b8ba;
+		transform:scaleX(0);
+		transition:all 0.3s;
+	}
+	#con1 ul li:hover p:after { transform:scaleX(1); } 
+	
+	#con2 {
+		height: 710px;
+		background-color: #23507b;
+		padding-top:60px;
+		padding-bottom: 60px;
+		box-sizing: border-box;
+		overflow: hidden;
+		text-align: center;
+	}
+	#con2 #title { text-align: center; position:relative;}
+	#con2 h1 {
+		text-align: center;
+		color:#fff;
+		font-size:34px;
+		line-height: 34px;
+		font-weight: normal;
+	}
+	#con2 #title p { 
+		color:#fff; 
+		text-align: center; 
+		margin:20px 0 20px 0;
+		font-size: 18px;
+		line-height: 18px;
+	}
+
+	#con2 #title input {
+		width:720px;
+		height:70px;
+		border:none;
+		font-size: 18px;
+		padding-left:15px;
+		padding-right:15px;
+		box-sizing: border-box;
+		margin-bottom:60px;
+	}
+	#con2 #title button {
+		width:30px;
+		height:30px;
+		background-color: #fff;
+		border:none;
+		text-indent:-9999px;
+		background:#fff url("../img/search.svg") center no-repeat;
+		background-size:30px 30px;
+		position:absolute;
+		right:245px;
+		bottom:80px;
+		cursor:pointer;
+	}
+	#con2 h2 { 
+		color:#fff;
+		text-align: center;
+		font-weight: normal;
+		margin-bottom: 10px;
+		font-size: 24px;
+		line-height: 24px;
+	}
+	#con2 hr {
+		background-color: #fff;
+		border: none;
+		width:20px;
+		height: 2px;
+		display: inline-block;
+	}
+	#con2 #box1 { 
+		width:380px;
+		height:362px;
+		background-color: #12b8ba;
+		margin-right:20px;
+		padding:40px;
+		float: left;
+		position: relative;
+	}
+
+	#con2 #box1 input {
+		width:190px;
+		height:40px;
+		padding:0 15px 0 15px;
+		background-color: #fff;
+		font-size:14px;
+		border:none;
+	}
+	
+	#con2 #box1 input:nth-of-type(1) {
+		position: absolute;
+		left:40px;
+		bottom:100px;
+	}
+	#con2 #box1 input:nth-of-type(2) {
+		position: absolute;
+		left:40px;
+		bottom:40px;
+	}
+	#con2 #box1 button {
+		width:90px;
+		height:100px;
+		color:#fff;
+		background-color: #51656f;
+		border:none; 
+		position: absolute;
+		right:40px;
+		bottom: 40px;
+		font-size: 16px;
+		cursor: pointer;
+	}
+	
+	#con2 #box2 { 
+		width:380px;
+		height:362px;
+		background-color: #6cbc96;
+		margin-right:20px;
+		padding:40px;
+		float: left;
+		position: relative;
+	}
+
+	#con2 #box2 button{
+		width:140px;
+		height:40px;
+		background-color: #fff;
+		color:#51656f;
+		border: none;
+		font-size: 16px;
+		cursor: pointer;
+	}
+	#con2 #box2 button:nth-of-type(1) {
+		position:absolute;
+		left:40px;
+		bottom:100px;
+		
+	}
+
+	#con2 #box2 button:nth-of-type(2) {
+		position: absolute;
+		right:40px;
+		bottom:100px;
+		
+	}
+	
+	#con2 #box2 button:nth-of-type(3) {
+		width:300px;
+		height:40px;
+		background-color: #51656f;
+		color:#fff;
+		position: absolute;
+		bottom:40px;
+		left:40px;
+	}
+
+	#con2 #box3 { 
+		width:380px;
+		height:362px;
+		background-color: #12b8ba;
+		padding:40px;
+		float: left;
+		position: relative;
+	}
+
+	#con2 #box3 button {
+		width:300px;
+		height:40px;
+		background-color: #fff;
+		color: #51656f;
+		border: none;
+		font-size: 16px;
+		cursor: pointer;
+	}
+	#con2 #box3 button:nth-of-type(1) {
+		position: absolute;
+		left:40px;
+		bottom:100px;
+	}
+	#con2 #box3 button:nth-of-type(2) {
+		position: absolute;
+		left:40px;
+		bottom:40px;
+	}
+	#con2 #box1 p, #con2 #box2 p, #con2 #box3 p {
+		color:#fff;
+		font-size:18px;
+		line-height: 24px;
+		font-weight: 400;
+		padding:20px 0 20px 0;
+	}
+
+	#con3 {
+		height:620px;
+		background:url("../img/dr_bgimg.jpg") left center/cover no-repeat;
+		padding:60px 0 60px 0;
+	}
+	#con3 .align {
+		height:620px;
+		position:relative;
+	}
+	#con3 #textarea {
+		width:530px;
+		position:absolute;
+		right:80px;
+		top:0px;
+		text-align: center;
+		padding:60px 0 60px 0;
+	}
+
+	#con3 #textarea h1 {
+		color:#fff;
+		font-size:40px;
+		line-height: 50px;
+		margin-bottom: 60px;
+	}
+
+	#con3 #textarea p {
+		color:#fff;
+		font-size:20px;
+		line-height: 26px;
+		margin-bottom:60px;
+	}
+	#con3 #textarea button {
+		width:320px;
+		height:70px;
+		background-color: #12b8ba;
+		color:#fff;
+		border: none;
+		font-size:20px;
+		cursor: pointer;
+		transition:all 0.3s;
+	}
+	#con3 #textarea button:hover {
+		background:rgba(18,184,186,0.7);
+	}
+	footer {
+		height:320px;
+		padding:60px 0 10px 0;
+		text-align:center;
+		color:#5d5a5a;
+		background-color: #ddd;
+	}
+
+	footer ul li { 
+		display: inline-block;
+		padding:10px 20px;
+		margin-bottom:20px;
+	}
+	footer ul li a { color:#5d5a5a; transition:all 0.3s; }
+	footer ul li:hover a { color:#000; }
+
+	footer p {
+		font-size:14px;
+	}
